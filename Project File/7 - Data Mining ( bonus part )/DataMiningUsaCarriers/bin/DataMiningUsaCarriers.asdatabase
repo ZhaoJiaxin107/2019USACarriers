@@ -1,0 +1,557 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DataMiningUsaCarriers</ID>
+  <Name>DataMiningUsaCarriers</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T05:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <MiningStructures>
+    <MiningStructure>
+      <ID>MingStructure</ID>
+      <Name>MingStructure</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_vFactSummary</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9950" scrolltop="-3130" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24236" y="11261" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vFactSummary" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4297" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000c910000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_vFactSummary" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-9950</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-3130</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>UsaCarriersDSV</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>AIR TIME</ID>
+          <Name>AIR TIME</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>AIR_TIME</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>AIRCRAFT KEY</ID>
+          <Name>AIRCRAFT KEY</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>AIRCRAFT_KEY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>FLIGHT EFFICIENCY</ID>
+          <Name>FLIGHT EFFICIENCY</Name>
+          <Type>Double</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>FLIGHT_EFFICIENCY</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>FREIGHT</ID>
+          <Name>FREIGHT</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>FREIGHT</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>MAIL</ID>
+          <Name>MAIL</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>MAIL</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>PASSENGERS</ID>
+          <Name>PASSENGERS</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>PASSENGERS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>PAYLOAD</ID>
+          <Name>PAYLOAD</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>PAYLOAD</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>RAMP TO RAMP</ID>
+          <Name>RAMP TO RAMP</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>RAMP_TO_RAMP</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>SEATS</ID>
+          <Name>SEATS</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_vFactSummary</TableID>
+                <ColumnID>SEATS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>DecisionTree</ID>
+          <Name>DecisionTree</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Decision_Trees</Algorithm>
+          <Columns>
+            <Column>
+              <ID>AIR TIME</ID>
+              <Name>AIR TIME</Name>
+              <SourceColumnID>AIR TIME</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>AIRCRAFT KEY</ID>
+              <Name>AIRCRAFT KEY</Name>
+              <SourceColumnID>AIRCRAFT KEY</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>FLIGHT EFFICIENCY</ID>
+              <Name>FLIGHT EFFICIENCY</Name>
+              <SourceColumnID>FLIGHT EFFICIENCY</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>FREIGHT</ID>
+              <Name>FREIGHT</Name>
+              <SourceColumnID>FREIGHT</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>MAIL</ID>
+              <Name>MAIL</Name>
+              <SourceColumnID>MAIL</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>PASSENGERS</ID>
+              <Name>PASSENGERS</Name>
+              <SourceColumnID>PASSENGERS</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>PAYLOAD</ID>
+              <Name>PAYLOAD</Name>
+              <SourceColumnID>PAYLOAD</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>RAMP TO RAMP</ID>
+              <Name>RAMP TO RAMP</Name>
+              <SourceColumnID>RAMP TO RAMP</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>SEATS</ID>
+              <Name>SEATS</Name>
+              <SourceColumnID>SEATS</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>Clustering</ID>
+          <Name>Clustering</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Clustering</Algorithm>
+          <Columns>
+            <Column>
+              <ID>AIR TIME</ID>
+              <Name>AIR TIME</Name>
+              <SourceColumnID>AIR TIME</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>AIRCRAFT KEY</ID>
+              <Name>AIRCRAFT KEY</Name>
+              <SourceColumnID>AIRCRAFT KEY</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>FLIGHT EFFICIENCY</ID>
+              <Name>FLIGHT EFFICIENCY</Name>
+              <SourceColumnID>FLIGHT EFFICIENCY</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>FREIGHT</ID>
+              <Name>FREIGHT</Name>
+              <SourceColumnID>FREIGHT</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>MAIL</ID>
+              <Name>MAIL</Name>
+              <SourceColumnID>MAIL</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>PASSENGERS</ID>
+              <Name>PASSENGERS</Name>
+              <SourceColumnID>PASSENGERS</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>PAYLOAD</ID>
+              <Name>PAYLOAD</Name>
+              <SourceColumnID>PAYLOAD</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>RAMP TO RAMP</ID>
+              <Name>RAMP TO RAMP</Name>
+              <SourceColumnID>RAMP TO RAMP</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>SEATS</ID>
+              <Name>SEATS</Name>
+              <SourceColumnID>SEATS</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>Neural Network</ID>
+          <Name>Neural Network</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Neural_Network</Algorithm>
+          <Columns>
+            <Column>
+              <ID>AIR TIME</ID>
+              <Name>AIR TIME</Name>
+              <SourceColumnID>AIR TIME</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>AIRCRAFT KEY</ID>
+              <Name>AIRCRAFT KEY</Name>
+              <SourceColumnID>AIRCRAFT KEY</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>FLIGHT EFFICIENCY</ID>
+              <Name>FLIGHT EFFICIENCY</Name>
+              <SourceColumnID>FLIGHT EFFICIENCY</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>FREIGHT</ID>
+              <Name>FREIGHT</Name>
+              <SourceColumnID>FREIGHT</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>MAIL</ID>
+              <Name>MAIL</Name>
+              <SourceColumnID>MAIL</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>PASSENGERS</ID>
+              <Name>PASSENGERS</Name>
+              <SourceColumnID>PASSENGERS</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>PAYLOAD</ID>
+              <Name>PAYLOAD</Name>
+              <SourceColumnID>PAYLOAD</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>RAMP TO RAMP</ID>
+              <Name>RAMP TO RAMP</Name>
+              <SourceColumnID>RAMP TO RAMP</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>SEATS</ID>
+              <Name>SEATS</Name>
+              <SourceColumnID>SEATS</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+  </MiningStructures>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>UsaCarriersDW</ID>
+      <Name>UsaCarriersDW</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-9SRSOSG\ECE9017;Integrated Security=SSPI;Initial Catalog=UsaCarriers_DW</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>UsaCarriersDSV</ID>
+      <Name>UsaCarriersDSV</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout>
+                  <dds>
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10585" scrolltop="-3786" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25506" y="12573" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                      <font>
+                        <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                      </font>
+                      <mouseicon>
+                        <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                      </mouseicon>
+                    </diagram>
+                    <layoutmanager>
+                      <ddsxmlobj />
+                    </layoutmanager>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vFactSummary" left="0" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4297" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000c910000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_vFactSummary" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                  </dds>
+</DiagramLayout>
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>-10585</DiagramViewPortLeft>
+                <DiagramViewPortTop>-3786</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>UsaCarriersDW</DataSourceID>
+      <Schema>
+        <xs:schema id="UsaCarriersDSV" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="UsaCarriersDSV" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0f59f1ce-9176-46db-8c53-273733c1991c">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_vFactSummary" msprop:design-time-name="7c0a7c1d-e69f-45b0-b685-0522c4749b44" msprop:FriendlyName="vFactSummary" msprop:DbSchemaName="dbo" msprop:DbTableName="vFactSummary" msprop:TableType="View">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CARRIER_KEY" msprop:design-time-name="8a938a09-d0f8-40f7-a906-42eef52f1868" msprop:DbColumnName="CARRIER_KEY" msprop:FriendlyName="CARRIER_KEY" type="xs:int" />
+                      <xs:element name="ORIGIN_AIRPORT_KEY" msprop:design-time-name="ef516805-6c8b-4ef2-a61d-dba3888227ed" msprop:DbColumnName="ORIGIN_AIRPORT_KEY" msprop:FriendlyName="ORIGIN_AIRPORT_KEY" type="xs:int" />
+                      <xs:element name="DEST_AIRPORT_KEY" msprop:design-time-name="f766f1ec-b7e0-462d-98f8-8113c31ec776" msprop:DbColumnName="DEST_AIRPORT_KEY" msprop:FriendlyName="DEST_AIRPORT_KEY" type="xs:int" />
+                      <xs:element name="AIRCRAFT_KEY" msprop:design-time-name="f8b6350a-3ed5-48ee-97ee-c8a8b4553bcc" msprop:DbColumnName="AIRCRAFT_KEY" msprop:FriendlyName="AIRCRAFT_KEY" type="xs:int" />
+                      <xs:element name="FLIGHTDATE_KEY" msprop:design-time-name="e58b3259-8a0b-492b-9743-bdadac7c9dd2" msprop:DbColumnName="FLIGHTDATE_KEY" msprop:FriendlyName="FLIGHTDATE_KEY" type="xs:int" />
+                      <xs:element name="PAYLOAD" msprop:design-time-name="5ea6333b-9cca-43d7-bf6b-9a018117cdad" msprop:DbColumnName="PAYLOAD" msprop:FriendlyName="PAYLOAD" type="xs:int" />
+                      <xs:element name="FREIGHT" msprop:design-time-name="d6005f10-255e-4cc4-b7e2-579c61211bdf" msprop:DbColumnName="FREIGHT" msprop:FriendlyName="FREIGHT" type="xs:int" />
+                      <xs:element name="MAIL" msprop:design-time-name="6a651da8-b05e-4922-8f5e-36fc20653255" msprop:DbColumnName="MAIL" msprop:FriendlyName="MAIL" type="xs:int" />
+                      <xs:element name="PAYLOAD_RATE" msprop:design-time-name="1570e579-d336-40e6-ac72-31ecc65e75c2" msprop:DbColumnName="PAYLOAD_RATE" msprop:FriendlyName="PAYLOAD_RATE" type="xs:decimal" />
+                      <xs:element name="SEATS" msprop:design-time-name="7c8ae179-53b2-448c-8897-740b5f15c79b" msprop:DbColumnName="SEATS" msprop:FriendlyName="SEATS" type="xs:int" />
+                      <xs:element name="PASSENGERS" msprop:design-time-name="03452a63-e4eb-448f-9499-2b4c26544099" msprop:DbColumnName="PASSENGERS" msprop:FriendlyName="PASSENGERS" type="xs:int" />
+                      <xs:element name="PASSENGER_RATE" msprop:design-time-name="ff52f2a7-32c7-4ff8-8542-695ee632db39" msprop:DbColumnName="PASSENGER_RATE" msprop:FriendlyName="PASSENGER_RATE" type="xs:decimal" />
+                      <xs:element name="RAMP_TO_RAMP" msprop:design-time-name="499d0bf2-4123-4121-b316-980afa787445" msprop:DbColumnName="RAMP_TO_RAMP" msprop:FriendlyName="RAMP_TO_RAMP" type="xs:int" />
+                      <xs:element name="AIR_TIME" msprop:design-time-name="dc848f3a-1944-47d7-8b00-f891b920f33b" msprop:DbColumnName="AIR_TIME" msprop:FriendlyName="AIR_TIME" type="xs:int" />
+                      <xs:element name="FLIGHT_EFFICIENCY" msprop:design-time-name="895af660-376a-4995-af4b-c63b43b711b3" msprop:DbColumnName="FLIGHT_EFFICIENCY" msprop:FriendlyName="FLIGHT_EFFICIENCY" type="xs:decimal" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <UsaCarriersDSV xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

@@ -1,0 +1,307 @@
+--Simple MDX Query
+SELECT 
+FROM [UsaCarriersDSV]
+
+--Get the Total Passengers
+SELECT [Measures].[PASSENGERS] ON AXIS(0)
+FROM [UsaCarriersDSV]
+
+--Columns are must
+--Rows are optional
+
+--Get the Total MAIL
+SELECT [Measures].[MAIL] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--Get the Total MAIL
+SELECT 
+FROM [UsaCarriersDSV]
+WHERE [Measures].[MAIL]
+
+--Get the Total Fact Summary Count
+SELECT [Measures].[Fact Summary Count] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--Get Passengers, Carriers wise
+SELECT [Measures].[PASSENGERS] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Get Mails, Carriers wise
+SELECT [Measures].[MAIL] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Get Payload Rate, Carriers wise
+SELECT [Measures].[PAYLOAD RATE] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT  [Measures].[Cal_PayloadRate] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Get Passenger Rate, Carriers wise
+SELECT [Measures].[PASSENGER RATE] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT [Measures].[Cal_PassengerRate] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+
+--Get Flight Efficency, Carriers wise
+SELECT  [Measures].[FLIGHT EFFICIENCY] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT [Measures].[Cal_FightEfficiency] ON COLUMNS,
+       [Dim Carrier].[UNIQUE CARRIER NAME].[UNIQUE CARRIER NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Get Passengers, Year Wise
+SELECT [Measures].[PASSENGERS] ON ROWS,
+       [Dim Flightdate].[YEAR].[YEAR] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--Get Passengers, Quarter Wise
+SELECT [Measures].[PASSENGERS] ON ROWS,
+       [Dim Flightdate].[QUARTER].[QUARTER] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--Get Mails, Month Wise
+SELECT [Measures].[MAIL] ON COLUMNS,
+        [Dim Flightdate].[MONTH].[MONTH] ON ROWS
+FROM [UsaCarriersDSV]
+
+
+--Get Passenger Rate, Quarter Wise
+SELECT NON EMPTY [Measures].[PASSENGER RATE] ON COLUMNS,
+       NON EMPTY [Dim Flightdate].[QUARTER].[QUARTER] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Get Payload Rate, Quarter Wise
+SELECT NON EMPTY [Measures].[PAYLOAD RATE] ON COLUMNS,
+       NON EMPTY [Dim Flightdate].[QUARTER].[QUARTER] ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT NON EMPTY [Measures].[Cal_PayloadRate] ON COLUMNS,
+       NON EMPTY [Dim Flightdate].[QUARTER].[QUARTER] ON ROWS
+FROM [UsaCarriersDSV]
+
+
+--Get Flight Efficieny, Month Wise
+SELECT  NON EMPTY [Measures].[FLIGHT EFFICIENCY] ON COLUMNS,
+        NON EMPTY [Dim Flightdate].[MONTH].[MONTH] ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT  NON EMPTY [Measures].[Cal_FightEfficiency] ON COLUMNS,
+        NON EMPTY [Dim Flightdate].[MONTH].[MONTH] ON ROWS
+FROM [UsaCarriersDSV]
+--Get Passengers, Origin City Wise
+SELECT NON EMPTY [Measures].[PASSENGERS] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+--Get Mails, Origin Airport Wise
+SELECT NON EMPTY [Measures].[MAIL] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+--Get Passenger Rate, Origin City Wise
+SELECT NON EMPTY [Measures].[PASSENGER RATE] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+SELECT NON EMPTY [Measures].[Cal_PassengerRate] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+
+--Get Payload Rate, Origin Airport Wise
+SELECT NON EMPTY [Measures].[PAYLOAD RATE] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+SELECT NON EMPTY [Measures].[Cal_PayloadRate] ON AXIS(0),
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON AXIS(1)
+FROM [UsaCarriersDSV]
+
+--Get Passengers, Origin Airport Wise, only for Quarter 2
+SELECT NON EMPTY [Measures].[PASSENGERS] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON ROWS
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[QUARTER].&[2]
+
+--Get Mails, Origin City Wise, only for Month 10
+SELECT NON EMPTY [Measures].[MAIL] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON ROWS
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[MONTH].&[10]
+
+--Get Flight Effiency, Origin Airport Wise, only for Quarter 4
+SELECT NON EMPTY [Measures].[FLIGHT EFFICIENCY] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON ROWS
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[QUARTER].&[4]
+
+SELECT NON EMPTY [Measures].[Cal_FightEfficiency] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON ROWS
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[QUARTER].&[4]
+
+--Get the Total Passengers for Quarter 1
+--Attributes
+SELECT [Measures].[PASSENGERS] ON COLUMNS,
+       [Dim Flightdate].[QUARTER].&[1] ON ROWS
+FROM [UsaCarriersDSV]
+
+OR
+--Hierarchy
+SELECT [Measures].[PASSENGERS] ON COLUMNS,
+       [Dim Flightdate].[FIGHTDATEHierarchy].[YEAR].&[2019].&[1] ON ROWS
+FROM [UsaCarriersDSV]
+
+
+SELECT [Measures].[PASSENGERS] ON 0,
+       [Dim Flightdate].[QUARTER].[QUARTER] ON 1
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[FIGHTDATEHierarchy].[YEAR].&[2019].&[1]
+
+OR
+
+--Invalid
+--Same hierarchy cannot be used more than once.
+SELECT [Measures].[PASSENGERS] ON 0,
+       [Dim Flightdate].[QUARTER].[QUARTER] ON 1
+FROM [UsaCarriersDSV]
+WHERE [Dim Flightdate].[QUARTER].&[1]
+
+--Attribute
+[DEST AIRPORT]--> Dimension
+[CITY NAME]--> ColName/Hierarchy/Attribute
+[CITY NAME]--> Level
+
+--Hierarchy
+[DEST AIRPORT]--> Dimension
+[AirportHierarchy]--> Hierarchy
+[CITY NAME]--Level
+
+--Hierachy
+[DEST AIRPORT].[AirportHierarchy].[STATE NM]
+[DEST AIRPORT].[AirportHierarchy].[CITY NAME]
+[DEST AIRPORT].[AirportHierarchy].[IATACODE]
+
+--Attributes
+[DEST AIRPORT].[STATE NM].[STATE NM]
+[DEST AIRPORT].[CITY NAME].[CITY NAME]
+[DEST AIRPORT].[IATACODE].[IATACODE]
+
+--Grand Total of all States
+SELECT [ORIGIN AIRPORT].[STATE NM] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--State wise
+SELECT [ORIGIN AIRPORT].[STATE NM].[STATE NM] ON COLUMNS
+FROM [UsaCarriersDSV]
+
+--(Max)Passenger Rate for all airports
+SELECT NON EMPTY [Measures].[PASSENGER RATE] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[IATACODE].[IATACODE] ON ROWS
+FROM [UsaCarriersDSV]
+
+--(Max)Payload Rate for all cities
+SELECT NON EMPTY [Measures].[PAYLOAD RATE] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Payload Rate for all cities
+SELECT NON EMPTY [Measures].[Cal_PayloadRate] ON COLUMNS,
+       NON EMPTY [ORIGIN AIRPORT].[CITY NAME].[CITY NAME] ON ROWS
+FROM [UsaCarriersDSV]
+
+
+--(Max)Fight efficiency for all aircrafts
+SELECT NON EMPTY [Measures].[FLIGHT EFFICIENCY] ON COLUMNS,
+       NON EMPTY [Dim Aircraft].[AIRCRAFT TYPE].[AIRCRAFT TYPE] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Fight efficiency for all aircrafts
+SELECT NON EMPTY [Measures].[Cal_FightEfficiency] ON COLUMNS,
+       NON EMPTY [Dim Aircraft].[AIRCRAFT TYPE].[AIRCRAFT TYPE] ON ROWS
+FROM [UsaCarriersDSV]
+
+--Year wise, Quarter wise,City wise, passengers
+--Attributes
+SELECT NON EMPTY [Measures].[PASSENGERS] ON COLUMNS,
+	   (
+	   [Dim Flightdate].[YEAR].[YEAR],
+       [Dim Flightdate].[QUARTER].[QUARTER],
+	   [ORIGIN AIRPORT].[CITY NAME].[CITY NAME]
+	   ) ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT NON EMPTY [Measures].[Cal_PassengerRate] ON COLUMNS,
+	   (
+	   [Dim Flightdate].[YEAR].[YEAR],
+       [Dim Flightdate].[QUARTER].[QUARTER],
+	   [ORIGIN AIRPORT].[CITY NAME].[CITY NAME]
+	   ) ON ROWS
+FROM [UsaCarriersDSV]
+
+--Quarter wise,Airport wise, passengers
+--Hierarchy
+SELECT [Measures].[PASSENGERS] ON COLUMNS,
+	   (
+	   [Dim Flightdate].[FIGHTDATEHierarchy].[QUARTER],
+	   [ORIGIN AIRPORT].[AirportHierarchy].[IATACODE]
+	   ) ON ROWS
+FROM [UsaCarriersDSV]
+
+--Year wise, Quarter wise, Month wise, Passengers, Air Time,Mail
+SELECT {
+		[Measures].[PASSENGERS],
+		[Measures].[AIR TIME],
+		[Measures].[MAIL]
+		} ON COLUMNS,
+		(
+		[Dim Flightdate].[YEAR].[YEAR],
+		[Dim Flightdate].[MONTH].[MONTH]
+		) ON ROWS
+FROM [UsaCarriersDSV]
+
+--Year wise, Quarter wise, Month wise, Passengers Rate, Flight Efficiency, Payload Rate
+SELECT {
+		[Measures].[FLIGHT EFFICIENCY],
+		[Measures].[PASSENGER RATE],
+		[Measures].[PAYLOAD RATE]
+		} ON COLUMNS,
+		(
+		[Dim Flightdate].[YEAR].[YEAR],
+		[Dim Flightdate].[MONTH].[MONTH]
+		) ON ROWS
+FROM [UsaCarriersDSV]
+
+SELECT {
+		[Measures].[Cal_FightEfficiency],
+		[Measures].[Cal_PassengerRate],
+		[Measures].[Cal_PayloadRate]
+		} ON COLUMNS,
+		(
+		[Dim Flightdate].[YEAR].[YEAR],
+		[Dim Flightdate].[MONTH].[MONTH]
+		) ON ROWS
+FROM [UsaCarriersDSV]
+
+
+
+
+
+
+
+
+
+
+
+

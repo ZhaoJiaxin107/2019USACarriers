@@ -1,0 +1,100 @@
+--Decison Tree Model
+SELECT
+  t.[FREIGHT],
+  t.[PAYLOAD],
+  t.[RAMP_TO_RAMP],
+  t.[AIR_TIME]
+From
+  [DecisionTree]
+PREDICTION JOIN
+  OPENQUERY([UsaCarriersDW],
+    'SELECT
+      [FREIGHT],
+      [PAYLOAD],
+      [RAMP_TO_RAMP],
+      [AIR_TIME],
+      [MAIL],
+      [SEATS],
+      [PASSENGERS],
+      [FLIGHT_EFFICIENCY]
+    FROM
+      [dbo].[vFactSummary]
+    ') AS t
+ON
+  [DecisionTree].[PAYLOAD] = t.[PAYLOAD] AND
+  [DecisionTree].[FREIGHT] = t.[FREIGHT] AND
+  [DecisionTree].[MAIL] = t.[MAIL] AND
+  [DecisionTree].[SEATS] = t.[SEATS] AND
+  [DecisionTree].[PASSENGERS] = t.[PASSENGERS] AND
+  [DecisionTree].[RAMP TO RAMP] = t.[RAMP_TO_RAMP] AND
+  [DecisionTree].[AIR TIME] = t.[AIR_TIME] AND
+  [DecisionTree].[FLIGHT EFFICIENCY] = t.[FLIGHT_EFFICIENCY]
+
+--Clustering
+SELECT
+  t.[FREIGHT],
+  t.[MAIL],
+  t.[PAYLOAD],
+  t.[AIR_TIME],
+  t.[RAMP_TO_RAMP]
+From
+  [Clustering]
+PREDICTION JOIN
+  OPENQUERY([UsaCarriersDW],
+    'SELECT
+      [FREIGHT],
+      [MAIL],
+      [PAYLOAD],
+      [AIR_TIME],
+      [RAMP_TO_RAMP],
+      [SEATS],
+      [PASSENGERS],
+      [FLIGHT_EFFICIENCY]
+    FROM
+      [dbo].[vFactSummary]
+    ') AS t
+ON
+  [Clustering].[PAYLOAD] = t.[PAYLOAD] AND
+  [Clustering].[FREIGHT] = t.[FREIGHT] AND
+  [Clustering].[MAIL] = t.[MAIL] AND
+  [Clustering].[SEATS] = t.[SEATS] AND
+  [Clustering].[PASSENGERS] = t.[PASSENGERS] AND
+  [Clustering].[RAMP TO RAMP] = t.[RAMP_TO_RAMP] AND
+  [Clustering].[AIR TIME] = t.[AIR_TIME] AND
+  [Clustering].[FLIGHT EFFICIENCY] = t.[FLIGHT_EFFICIENCY]
+
+--Neural Network
+SELECT
+  t.[PAYLOAD],
+  t.[FREIGHT],
+  t.[MAIL],
+  t.[SEATS],
+  t.[AIR_TIME],
+  t.[RAMP_TO_RAMP]
+From
+  [Neural Network]
+PREDICTION JOIN
+  OPENQUERY([UsaCarriersDW],
+    'SELECT
+      [PAYLOAD],
+      [FREIGHT],
+      [MAIL],
+      [SEATS],
+      [AIR_TIME],
+      [RAMP_TO_RAMP],
+      [PASSENGERS],
+      [FLIGHT_EFFICIENCY]
+    FROM
+      [dbo].[vFactSummary]
+    ') AS t
+ON
+  [Neural Network].[PAYLOAD] = t.[PAYLOAD] AND
+  [Neural Network].[FREIGHT] = t.[FREIGHT] AND
+  [Neural Network].[MAIL] = t.[MAIL] AND
+  [Neural Network].[SEATS] = t.[SEATS] AND
+  [Neural Network].[PASSENGERS] = t.[PASSENGERS] AND
+  [Neural Network].[RAMP TO RAMP] = t.[RAMP_TO_RAMP] AND
+  [Neural Network].[AIR TIME] = t.[AIR_TIME] AND
+  [Neural Network].[FLIGHT EFFICIENCY] = t.[FLIGHT_EFFICIENCY]
+
+

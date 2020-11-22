@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS_UsaCarriersCubeDB</Database>
+    <Server>DESKTOP-9SRSOSG\ECE9017</Server>
+    <ConnectionString>Data Source=DESKTOP-9SRSOSG\ECE9017;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>cJ3TIL8ykp3QjQ33KYcMlAbXr1g=2020/4/20 16:22:392020/4/20 15:28:43</TimeStamp>
+        <ID>
+          <String>UsaCarriersDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>eGDzqvD+tnHawzRFeUS2Akig5zk=2020/4/20 15:40:532020/4/20 15:29:17</TimeStamp>
+        <ID>
+          <String>UsaCarriersDSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BW9ZAsO/J/7osMP/CufB9whLyYQ=2020/4/20 16:33:542020/4/20 16:26:29</TimeStamp>
+        <ID>
+          <String>Dim Airport</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>LKIZ1i04Edkacz+L0Rt+BNvYujA=2020/4/20 18:09:012020/4/20 16:26:29</TimeStamp>
+        <ID>
+          <String>Dim Carrier</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>qSPJDBhQbZ8j9sWVZww+h2+LVOk=2020/4/20 16:28:502020/4/20 16:26:29</TimeStamp>
+        <ID>
+          <String>Dim Flightdate</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>i2uy5HVAUqAOxd9NGwGYGRsCdcs=2020/4/20 16:50:012020/4/20 16:26:29</TimeStamp>
+        <ID>
+          <String>Dim Aircraft</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>lmcaMu4+41ZVWubIROV3pNHX8QM=2020/4/21 17:42:572020/4/20 16:26:29t36LA6ToFnxPFoS5h63q7mJmkr0=2020/4/20 16:26:292020/4/20 16:26:29</TimeStamp>
+        <ID>
+          <String>UsaCarriersDSV</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>AqeT7BZO2G1GFKPlpzPhkCRMu3Q=2020/4/20 15:28:142020/4/20 15:28:14</TimeStamp>
+      <ID>
+        <String>SSAS_UsaCarriersCubeDB</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2020-04-21T21:43:09.743333Z</LastDeployed>
+</DeploymentSnapshot>

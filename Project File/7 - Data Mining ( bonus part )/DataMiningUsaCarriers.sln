@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DataMiningUsaCarriers", "DataMiningUsaCarriers\DataMiningUsaCarriers.dwproj", "{8C6FE65C-B503-4BFB-9A50-D297F4778AD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C6FE65C-B503-4BFB-9A50-D297F4778AD4}.Development|Default.ActiveCfg = Development
+		{8C6FE65C-B503-4BFB-9A50-D297F4778AD4}.Development|Default.Build.0 = Development
+		{8C6FE65C-B503-4BFB-9A50-D297F4778AD4}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16E585AB-9D2E-4396-A842-D4493A90CBC7}
+	EndGlobalSection
+EndGlobal
